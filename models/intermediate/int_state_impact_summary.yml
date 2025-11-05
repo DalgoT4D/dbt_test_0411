@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: int_state_impact_summary
+    description: "Aggregated summary of people affected and houses damaged per state."
+    columns:
+      - name: state
+        description: "Name of the state."
+        tests:
+          - not_null
+          - unique
+      - name: total_houses_damaged
+        description: "Sum of houses damaged for each state."
+      - name: total_people_affected
+        description: "Sum of people affected for each state."
